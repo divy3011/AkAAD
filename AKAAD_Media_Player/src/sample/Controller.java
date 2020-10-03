@@ -40,6 +40,7 @@ public class Controller implements Initializable {
     private MediaView mediaView;
     private MediaPlayer mediaPlayer;
     private String filepath;
+    boolean repeat=false;
     @FXML
     public void handleButtonAction(ActionEvent event){
         FileChooser fileChooser = new FileChooser();
@@ -132,6 +133,12 @@ public class Controller implements Initializable {
     public void exit(ActionEvent event){
         System.exit(0);
     }
+    @FXML
+    public void replay(ActionEvent event){
+        mediaPlayer.seek(mediaPlayer.getStartTime());
+        playpause(event);
+        timeSlider.setValue(0);
+    }
     private static String formatTime(Duration elapsed, Duration duration) {
         int intElapsed = (int) floor(elapsed.toSeconds());
         int elapsedHours = intElapsed / (60 * 60);
@@ -175,20 +182,6 @@ public class Controller implements Initializable {
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-//        mediaView.fitHeightProperty().bind(Bindings.selectDouble(mediaView.sceneProperty(), "height"));
-//        mediaView.fitWidthProperty().bind(Bindings.selectDouble(mediaView.sceneProperty() , "width"));
-//        mediaPlayer.setAutoPlay(true);
-//        mediaView.setMediaPlayer(mediaPlayer);
-        Menu menu = new Menu("File");
-        MenuItem menuItem = new MenuItem("Open");
-        menu.getItems().add(menuItem);
-        menuBar.getMenus().add(menu);
-        menuItem.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                handleButtonAction(event);
-            }
-        });
         if(filepath!=null) {
             timeSlider.setOnMousePressed(new EventHandler<MouseEvent>() {
                 @Override

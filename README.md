@@ -7,8 +7,3 @@
 -CRC and Implementation
 -Use case analysis
 -User Interface
-
-# Bugs
--slider
--buttons overlapping
--volume slider

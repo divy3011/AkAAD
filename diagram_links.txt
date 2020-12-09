@@ -1,4 +1,0 @@
-link to class-diagram to edit: https://app.genmymodel.com/
-link to see class-diagram: https://app.genmymodel.com/api/projects/_fDljkAukEeu_35Z1GKTxtw/diagrams/_fDnYwAukEeu_35Z1GKTxtw/svg
-
-link to uml-diagram to edit: https://app.creately.com/

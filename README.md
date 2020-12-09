@@ -1,9 +1,17 @@
-# OOM_API
--Building a media player project using java
+# Building a Media Player using java
 
-# To Do
--designing and creation of icons
--UML class diagram
--CRC and Implementation
--Use case analysis
--User Interface
+# Libraries required
+    - javafx
+    - jfeonix
+
+# Required applications for development
+    - Intellij
+    - Scene Builder
+    - StarUML
+
+# How to Run?
+    - after the required applications are installed
+    - just run the Main.java
+
+# Contributors
+    - Divy Agrawal     - Ambika Singh Kaushik     - Aditya Aggarwal
